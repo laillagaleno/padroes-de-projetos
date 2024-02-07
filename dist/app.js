@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const circulo_1 = require("./src/circulo");
+const retangulo_1 = require("./src/retangulo");
+const retangulo = new retangulo_1.Retangulo(5, 10);
+const area = retangulo.area();
+const perimetro = retangulo.perimetro();
+console.log("Área do retângulo:", area);
+console.log("Perímetro do retângulo:", perimetro);
+const citculo = new circulo_1.Circulo(5.7);
+const areaC = citculo.area();
+const perimetroC = citculo.perimetro();
+console.log("Área do círculo:", areaC);
+console.log("Perímetro do círculo:", perimetroC);
