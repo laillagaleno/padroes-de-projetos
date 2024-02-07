@@ -15,17 +15,14 @@ export class Funcionario {
         let inss: number;
         if(salarioBruto <= 1412){
             inss = this.salario * 0.08;
-        }if(salarioBruto > 1412 && salarioBruto <= 2666.68){
-            inss = this.salario * 0.08;
+        }
+        if(salarioBruto > 1412 && salarioBruto <= 2666.68){
             inss = this.salario * 0.09;
-        }if(salarioBruto > 2666.68 && salarioBruto <= 4000.03){
-            inss = this.salario * 0.08;
-            inss = this.salario * 0.09;
+        }
+        if(salarioBruto > 2666.68 && salarioBruto <= 4000.03){
             inss = this.salario * 0.12;
-        }if(salarioBruto > 4000.03 && salarioBruto <= 7786.02){
-            inss = this.salario * 0.08;
-            inss = this.salario * 0.09;
-            inss = this.salario * 0.12;
+        }
+        if(salarioBruto > 4000.03 && salarioBruto <= 7786.02){
             inss = this.salario * 0.14;
         }
     }
