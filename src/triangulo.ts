@@ -19,9 +19,19 @@ export class Triangulo{
         }
         return false;
     }
-
-    area(): number{
-        const h: number = Math.sqrt(Math.pow(this.a, 2) - Math.pow(this.b, 2) + Math.pow(this.c, 2))/2
-        return (this.c * h)/2;
+    
+    //s = (a+b+c)/2
+    area(): number | null{
+        const isTriangulo = this.isTriangulo();
+        if(!isTriangulo){
+            return null;
+        }
+       
+        const s = (this.a + this.b + this.c)/2;
+        return Math.sqrt(s*(s-this.a)*(s-this.b)*(s-this.c));
     }
 }
+
+const triangulo = new Triangulo(3, 4, 5);
+console.log(triangulo.isTriangulo() ? "É um triângulo" : "Não é um triângulo");
+console.log("Área:",triangulo.area());

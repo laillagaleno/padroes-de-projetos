@@ -15,16 +15,17 @@ class Aluno {
         for (let nota of this.notas) {
             soma += nota;
         }
-        return soma / this.notas.length;
+        const media = soma / this.notas.length;
+        return Number(media.toFixed(2));
     }
     situacao() {
         const media = this.media();
-        if (media >= 7) {
-            return "Aprovado";
-        }
-        else {
+        if (media < 7)
             return "Reprovado";
-        }
+        return "Aprovado";
     }
 }
 exports.Aluno = Aluno;
+const aluno = new Aluno('Lailla', '20211BCC0041', [10, 9.5, 9]);
+console.log("Média do aluno:", aluno.media());
+console.log("Situação do aluno:", aluno.situacao());

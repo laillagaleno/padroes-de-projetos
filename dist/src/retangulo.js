@@ -16,3 +16,6 @@ class Retangulo {
     }
 }
 exports.Retangulo = Retangulo;
+const retangulo = new Retangulo(10, 20);
+console.log("Área:", retangulo.area());
+console.log("Perimetro:", retangulo.perimetro());

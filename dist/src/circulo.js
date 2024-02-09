@@ -16,3 +16,6 @@ class Circulo {
     }
 }
 exports.Circulo = Circulo;
+const circulo = new Circulo(2);
+console.log("Área do círculo:", circulo.area());
+console.log("Perímetro do círculo:", circulo.perimetro());

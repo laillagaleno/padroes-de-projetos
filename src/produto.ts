@@ -10,7 +10,7 @@ export class Produto{
     }
     
     valorEstoque():number{
-        return this.preco * this.qnt;
+        return Number((this.preco * this.qnt).toFixed(2));
     }
 
     situacao(): string{
@@ -19,3 +19,7 @@ export class Produto{
     }
 
 }
+
+const produto = new Produto("Notebook", 2500, 10);
+console.log(produto.valorEstoque());
+console.log(produto.situacao());

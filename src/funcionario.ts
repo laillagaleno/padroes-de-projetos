@@ -9,21 +9,11 @@ export class Funcionario {
         this.cargo = cargo;
     }
 
-    liquido(salarioBruto:number, descontos: number ): number {
-        
-        //descontar INSS(porcentagem do salário bruto)
-        let inss: number;
-        if(salarioBruto <= 1412){
-            inss = this.salario * 0.08;
-        }
-        if(salarioBruto > 1412 && salarioBruto <= 2666.68){
-            inss = this.salario * 0.09;
-        }
-        if(salarioBruto > 2666.68 && salarioBruto <= 4000.03){
-            inss = this.salario * 0.12;
-        }
-        if(salarioBruto > 4000.03 && salarioBruto <= 7786.02){
-            inss = this.salario * 0.14;
-        }
+    salarioLiquido(imposto: number, beneficios: number) {
+        const salarioLiquido = this.salario - imposto + beneficios;
+        return Number(salarioLiquido.toFixed(2));
     }
 }
+
+const funcionario = new Funcionario('Lailla', 3000, 'Desenvolvedora');
+console.log("O salario Líquido é R$",funcionario.salarioLiquido(300, 500));

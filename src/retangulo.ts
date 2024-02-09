@@ -15,3 +15,7 @@ export class Retangulo {
     return 2 * (this.altura + this.largura);
   }
 }
+
+const retangulo = new Retangulo(10, 20);
+console.log("Área:", retangulo.area());
+console.log("Perimetro:",retangulo.perimetro());

@@ -14,3 +14,7 @@ export class Circulo{
         return Number(p.toFixed(2));
     }
 }
+
+const circulo = new Circulo(2);
+console.log("Área do círculo:", circulo.area());
+console.log("Perímetro do círculo:", circulo.perimetro());
